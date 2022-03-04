@@ -39,6 +39,7 @@
       .title {
         font-size: var(--lg);
         margin-bottom: 40px;
+        text-align: center;
       }
 
       .my-order-container {
@@ -49,13 +50,11 @@
 
       .order {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto 1fr auto;
         gap: 16px;
-        align-items: center;
-        background-color: var(--text-input-field);
-        margin-bottom: 24px;
+        align-items: center;       
+        margin-bottom: 12px;
         border-radius: 8px;
-        padding: 0 24px;
       }
 
       .order p:nth-child(1){
@@ -68,6 +67,10 @@
         font-weight: bold;
       }
 
+      .order img:nth-child(3) {
+        margin-left: 12px;
+      }
+
       .order p span:nth-child(1) {
         font-size: var(--md);
         font-weight: bold;
@@ -78,42 +81,13 @@
         color: var(--very-light-pink);
       }
 
-      .shopping-cart {
-        display: grid;
-        grid-template-columns: auto 1fr auto auto;
-        gap: 16px;
-        align-items: center;
-      }
-
-      .shopping-cart figure {
-        margin: 0;
-      }
-
-      .shopping-cart figure img {
-        width: 70px;
-        height: 70px;
-        border-radius: 20px;
-        object-fit: cover;
-      }
-
-      .shopping-cart p:nth-child(2) {
-        color: var(--very-light-pink);
-      }
-
-      .shopping-cart p:nth-child(3) {
-        font-size: var(--md);
-        font-weight: bold;
-      }
-
-      
-
       
     </style>
   </head>
   <body>
     <div class="my-order">
       <div class="my-order-container">
-        <h1 class="title">My order</h1>
+        <h1 class="title">My orders</h1>
         <div class="my-order-content">
           <div class="order">
             <p>
@@ -121,43 +95,42 @@
               <span>6 articles</span>
             </p>
             <p>$560.00</p>
+            <img src="icons/flechita.svg" alt="flechita" class="arrow">
+          </div>
+          <div class="order">
+            <p>
+              <span>03.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p>$560.00</p>
+            <img src="icons/flechita.svg" alt="" class="arrow">
+          </div>
+          <div class="order">
+            <p>
+              <span>03.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p>$560.00</p>
+            <img src="icons/flechita.svg" alt="" class="arrow">
+          </div>
+          <div class="order">
+            <p>
+              <span>03.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p>$560.00</p>
+            <img src="icons/flechita.svg" alt="" class="arrow">
+          </div>
+          <div class="order">
+            <p>
+              <span>03.25.21</span>
+              <span>6 articles</span>
+            </p>
+            <p>$560.00</p>
+            <img src="icons/flechita.svg" alt="" class="arrow">
           </div>
 
-          <div class="shopping-cart">
-            <figure>
-              <img
-                src="
-              https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="bici"
-              />
-            </figure>
-            <p>Bike</p>
-            <p>$30,00</p>
-          </div>
 
-          <div class="shopping-cart">
-            <figure>
-              <img
-                src="
-              https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="bici"
-              />
-            </figure>
-            <p>Bike</p>
-            <p>$30,00</p>
-          </div>
-
-          <div class="shopping-cart">
-            <figure>
-              <img
-                src="
-              https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="bici"
-              />
-            </figure>
-            <p>Bike</p>
-            <p>$30,00</p>
-          </div>
         </div>
       </div>
     </div>
