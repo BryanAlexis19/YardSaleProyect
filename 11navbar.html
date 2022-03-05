@@ -12,99 +12,166 @@
     />
     <title>Edit Account</title>
     <style>
-            :root {
-              --white: #ffffff;
-              --black: #000000;
-              --very-light-pink: #c7c7c7;
-              --text-input-field: #f7f7f7;
-              --hospital-green: #acd9b2;
-              --dark: #232830;
-              --sm: 14px;
-              --md: 16px;
-              --lg: 18px;
-            }
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --very-light-pink: #c7c7c7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --dark: #232830;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
 
-            body {
-              margin: 0;
-              font-family: "Quicksand", sans-serif;
-            }
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
 
-            .navbar {
-              width: 100vw;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              margin: 0px 0px 0px 0px;
-              padding: 4px 0px 4px 0px;
-              box-shadow: 0px 5px 7px 0px rgba(207,191,191,0.75);
-              -webkit-box-shadow: 0px 5px 7px 0px rgba(207,191,191,0.75);
-              -moz-box-shadow: 0px 5px 7px 0px rgba(207,191,191,0.75);
-              
-            }
+      .navbar {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px 0px 0px 0px;
+        padding: 2px 0px 2px 0px;
+        box-shadow: 0px 5px 7px 0px rgba(207,191,191,0.75);
+        -webkit-box-shadow: 0px 5px 7px 0px rgba(207,191,191,0.75);
+        -moz-box-shadow: 0px 5px 7px 0px rgba(207,191,191,0.75);
+      }
 
-            .navbar div:nth-child(1){
-              display: flex;
-              flex-direction: row;
-              margin-left: 32px;
-              align-items: center;
-            }
+      .menu {
+        display: none;
+        margin: 0px 12px;
+        width: 24px;
+      }
 
-            .navbar-left img{
-              width: 150px;
-            }
-            .navbar-left ul{
-              display: flex;
-              flex-direction: row;
-              margin-right: 12x;
-            }
+      .navbar-left {
+        display: flex;
+        margin-left: 32px;
+        align-items: center;
+      }
 
-            .navbar-left ul li {
-              list-style: none;
-              margin-left: 12px;
-              color: var(--very-light-pink);
-              font-weight: bold;
-              padding: 4px 12px;
-            }
+      .navbar-left img{
+        width: 120px;
+      }
 
-            .navbar-left ul li:hover  {
-              color: var(--hospital-green);
-              border: 1px solid var(--hospital-green);
-              border-radius: 8px;
-            }
+      .navbar-left ul{
+        display: flex;
+        flex-direction: row;
+        margin-right: 12x;
+      }
 
-            .navbar-right {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-            }
+      .navbar-left ul li {
+        list-style: none;
+        margin-left: 12px;        
+      }
 
-            .navbar-right p a {
-              text-decoration: none;
-              padding: 12px;
-            }
-            <!-- END CSS -->
+      .navbar-left ul li a {
+        text-decoration: none;
+        color: var(--very-light-pink);
+        font-size: var(--md);
+        font-weight: bold;
+        padding: 6px 12px;
+      }
+
+      .navbar-left ul li a:hover  {
+        color: var(--hospital-green);
+        border: 1px solid var(--hospital-green);
+        border-radius: 8px;
+      }
+
+      .navbar-right {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+      }
+      .navbar-right ul {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+
+      .navbar-right ul li {
+        text-decoration: none;
+        list-style: none;
+        padding: 12px;
+        margin-right: 16px;
+      }
+
+      .navbar-email {
+        color: var(--very-light-pink);
+        font-size: var(--md);
+      }
+
+      .navbar-shopping-cart {
+        position: relative;
+      }
+
+      .navbar-shopping-cart div {
+        position: absolute;
+        top: 7px;
+        right: 6px;
+        border-radius: 50%;
+        background-color: var(--hospital-green);
+        width: 16px;
+        height: 16px;
+        font-size: var(--sm);
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      @media screen and (max-width: 640px){
+        .menu {
+          display: block;
+        }
+
+        .navbar-left ul{
+          display: none;
+        }
+        
+        .navbar-email {
+          display: none;
+        }
+      }
+
+      <!-- END CSS -->
     </style>
   </head>
   <body>
     <nav class="navbar">
+      <img src="./icons/icon_menu.svg" alt="" class="menu" />
+
       <div class="navbar-left">
         <img src="logos/logo_yard_sale.svg" alt="" class="logo" />
+
         <ul class="lista">
-          <li>All</li>
-          <li>Clothes</li>
-          <li>Electronics</li>
-          <li>Furniture</li>
-          <li>Toys</li>
-          <li>Others</li>
+          <li><a href="">All</a></li>
+          <li><a href="">Clothes</a></li>
+          <li><a href="">Electronics</a></li>
+          <li><a href="">Furnitures</a></li>
+          <li><a href="">Toys</a></li>
+          <li><a href="">Others</a></li>
         </ul>
       </div>
 
       <div class="navbar-right">
-        <p><a href="" class="email">platzi@example.com</a></p>
-        <figure>
-          <img src="icons/icon_shopping_cart.svg" alt="" class="cart-logo" />
-        </figure>
+        <ul>
+          <li class="navbar-email">example@platzi.com</li>
+          <li class="navbar-shopping-cart">
+            <img src="./icons/icon_shopping_cart.svg" alt="cart" />
+            <div>2</div>
+          </li>
+        </ul>
       </div>
     </nav>
   </body>
 </html>
+`
